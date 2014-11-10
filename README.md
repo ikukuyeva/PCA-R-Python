@@ -15,7 +15,7 @@ Attendees are expected to have a working knowledge of statistics or linear algeb
 Tutorial Outline
 ------------
 - Motivation for PCA
-- Overview of PCA (including checking of assumptions, deciding how many components to use, etc.)
+- Overview of PCA (e.g. checking of assumptions, deciding how many components to use, etc.)
 - Two aplications of PCA
 - Extensions of PCA 
 
@@ -36,13 +36,13 @@ Running the examples
 ------------
 - Clone the repository and navigate to 'Code' folder it in the Terminal.
 - Example 1: Run the R/Python code as follows:
- ```{r}
+  ```{r}
  source("Example1.R")
  ```
  ```python
  execfile("Example1.py")
  ```
- - Example 2: Run the R/Python code as follows:
+- Example 2: Run the R/Python code as follows:
   ```{r}
  source("Example2.R")
  ```
