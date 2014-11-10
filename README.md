@@ -1,8 +1,3 @@
-Contents of this file
-============
-* Tutorial Overview
-* Running the Examples
-
 Tutorial Overview
 ============
 - Introduce attendees not familiar with Principal Component Analysis (PCA) to the commonly used dimension reduction approach.
@@ -34,7 +29,7 @@ If scraping Meetup data from scratch:
  
 Running the examples
 ------------
-- Clone the repository and navigate to 'Code' folder it in the Terminal.
+- Clone the repository and navigate to 'Code' folder in the Terminal.
 - Example 1: Run the R/Python code as follows:
 ```{r}
 # In R:
