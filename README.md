@@ -11,7 +11,7 @@ Tutorial Outline
 ------------
 - Motivation for PCA
 - Overview of PCA (e.g. checking of assumptions, deciding how many components to use, etc.)
-- Two aplications of PCA
+- Two applications of PCA
 - Extensions of PCA 
 
 Running the Examples
