@@ -36,16 +36,23 @@ Running the examples
 ------------
 - Clone the repository and navigate to 'Code' folder it in the Terminal.
 - Example 1: Run the R/Python code as follows:
-  ```{r}
- source("Example1.R")
- ```
- ```python
- execfile("Example1.py")
- ```
+```{r}
+# In R:
+source("Example1.R")
+```
+ 
+```python
+# In Python:
+execfile("Example1.py")
+```
+
 - Example 2: Run the R/Python code as follows:
-  ```{r}
- source("Example2.R")
- ```
- ```python
- execfile("Example2.py")
- ```
+```{r}
+# In R:
+source("Example2.R")
+```
+ 
+```python
+# In Python:
+execfile("Example2.py")
+```
