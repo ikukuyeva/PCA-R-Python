@@ -104,8 +104,8 @@ req_url <- paste0(
 ### Use default settings: 200 groups per hour and 
 ###	radius=25 miles of the city specified
 tmp <- fromJSON(rawToChar(
-			GET(req_url
-				)$content
+			  GET(req_url
+			     )$content
 			)
 		)$results
 
@@ -117,7 +117,7 @@ tmp <- fromJSON(rawToChar(
 meetups <- sapply(tmp, function(x) x$group_urlname)
 
 ### --- Step 3b: Extract the keywords of each meetup:
-topics <- sapply(tmp, function(x) preproc_topic(x$topic))
+topics  <- sapply(tmp, function(x) preproc_topic(x$topic))
 
 ### --- Step 3c: Format the keywords of each meetup to be on
 ###				 one line to ease manipulation:
@@ -125,28 +125,28 @@ topics_1line <- sapply(topics, function(x) preproc_desc(x))
 
 ### --- Step 3d: Stem the keywords:
 topics_df <- data.frame(id=1:length(topics_1line), 
-				   		words=topics_1line
-				   		)
+			words=topics_1line
+			)
 
 topics_stem <- create_matrix(topics_df,
-					 	stemWords=TRUE,
-					 	removeStopwords=FALSE,
-					 	minWordLength=2
-					 	)
+			     stemWords=TRUE,
+			     removeStopwords=FALSE,
+			     minWordLength=2
+			     )
 colnames(topics_stem) # see the stemmed words
 topics_stem 		  <- as.matrix(topics_stem)
 rownames(topics_stem) <- meetups
 
 ### --- Step 3e: Compute the distance between two Meetup groups:
 dist_mat <- apply(topics_stem, 
-				  1, 
-				  function(x){
-				  	apply(topics_stem, 
-				  		  1, 
-				  		  function(y) abs_dist(x, y)
-				  		  )
-				  	}
-				  )
+		  1, 
+		  function(x){
+			apply(topics_stem, 
+			1, 
+			function(y) abs_dist(x, y)
+				)
+		  }
+		)
 
 ### ----------------------------------------------------------------------------
 ### --- Step 4: Save off data to be analyzed in Example 2 via PCA:
